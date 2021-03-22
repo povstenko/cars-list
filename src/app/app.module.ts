@@ -8,6 +8,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContentComponent } from './components/content/content.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { HomeComponent } from './components/home/home.component';
+import { MaintenenceComponent } from './components/maintenence/maintenence.component';
+import { TopComponent } from './components/top/top.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { MenuComponent } from './components/menu/menu.component';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
-    MenuComponent
+    MenuComponent,
+    HomeComponent,
+    MaintenenceComponent,
+    TopComponent
   ],
   imports: [
     BrowserModule,

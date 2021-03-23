@@ -11,6 +11,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { MaintenenceComponent } from './components/maintenence/maintenence.component';
 import { TopComponent } from './components/top/top.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { AuthPageComponent } from './pages/auth-page/auth-page.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,11 +27,16 @@ import { TopComponent } from './components/top/top.component';
     MenuComponent,
     HomeComponent,
     MaintenenceComponent,
-    TopComponent
+    TopComponent,
+    RegisterPageComponent,
+    LoginPageComponent,
+    AuthPageComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

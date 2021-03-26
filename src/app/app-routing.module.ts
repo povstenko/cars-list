@@ -1,6 +1,9 @@
 import { registerLocaleData } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CarAddComponent } from './components/car-add/car-add.component';
+import { CarDetailsComponent } from './components/car-details/car-details.component';
+import { CarEditComponent } from './components/car-edit/car-edit.component';
 import { HomeComponent } from './components/home/home.component';
 import { MaintenenceComponent } from './components/maintenence/maintenence.component';
 import { TopComponent } from './components/top/top.component';
@@ -19,6 +22,9 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'maintenance', component: MaintenenceComponent },
       { path: 'top', component: TopComponent },
+      { path: 'car-add', component: CarAddComponent },
+      { path: 'car-edit:id', component: CarEditComponent },
+      { path: 'car-details:id', component: CarDetailsComponent }
     ],
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' },

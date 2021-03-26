@@ -12,9 +12,10 @@ export class CarsService {
 
   getCars(): Observable<Car[]> {
     return this.http.get(this.url) as Observable<Car[]>;
+
   }
-  getCar() {
-    //
+  getCar(id): Observable<Car>{
+    return this.http.get(this.url + '/' + id) as Observable<Car>
   }
   deleteCar(id: number) {
     //

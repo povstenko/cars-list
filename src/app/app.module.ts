@@ -16,6 +16,9 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CarAddComponent } from './components/car-add/car-add.component';
+import { CarEditComponent } from './components/car-edit/car-edit.component';
+import { CarDetailsComponent } from './components/car-details/car-details.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterPageComponent,
     LoginPageComponent,
     AuthPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    CarAddComponent,
+    CarEditComponent,
+    CarDetailsComponent
   ],
   imports: [
     BrowserModule,

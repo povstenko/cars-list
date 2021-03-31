@@ -1,0 +1,37 @@
+<div class="px-4 py-5 mb-5 text-center bg-dark text-secondary">
+  <h1 class="display-5 fw-bold text-white">Car Maintenance</h1>
+  <div class="col-lg-6 mx-auto">
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <button type="button" class="btn btn-primary">Add new car</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Car Name</th>
+            <th scope="col">Car Model</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars">
+            <td>{{car.name}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.price}}</td>
+            <td>
+              <button type="button" class="btn btn-primary" (click)="showCarDetails(car.id)">Details</button>
+              <button type="button" class="btn btn-warning">Edit</button>
+              <button type="button" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -4,23 +4,30 @@ import { Observable } from 'rxjs';
 import { Car } from '../models/Car';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CarsService {
   url = 'http://localhost:3000/cars';
-  constructor(private http: HttpClient) {}
+  constructor(private http:HttpClient) { }
 
-  getCars(): Observable<Car[]> {
+  getCars():Observable<Car[]> {
     return this.http.get(this.url) as Observable<Car[]>;
+  }
 
+  getCar(id): Observable<Car> {
+    // this.http.get(this.url + '/' + id)
+    return this.http.get(`${this.url}/${id}`) as Observable<Car>;
   }
-  getCar(id): Observable<Car>{
-    return this.http.get(this.url + '/' + id) as Observable<Car>
+
+  deleteCar(id: number) { 
+    // ...
   }
-  deleteCar(id: number) {
-    //
-  }
+
   updateCar() {
-    //
+    // ...
   }
+
+
+
+
 }

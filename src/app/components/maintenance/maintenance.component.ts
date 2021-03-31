@@ -4,23 +4,30 @@ import { Car } from 'src/app/models/Car';
 import { CarsService } from 'src/app/services/cars.service';
 
 @Component({
-  selector: 'app-maintenence',
-  templateUrl: './maintenence.component.html',
-  styleUrls: ['./maintenence.component.css']
+  selector: 'app-maintenance',
+  templateUrl: './maintenance.component.html',
+  styleUrls: ['./maintenance.component.css']
 })
-export class MaintenenceComponent implements OnInit {
+export class MaintenanceComponent implements OnInit {
 
   constructor(private carsService: CarsService, private router: Router) { }
+
   cars: Car[] = [];
 
   ngOnInit(): void {
-      this.carsService.getCars().subscribe(() => {
-        console.log(this.cars);
-    });
+    this.carsService.getCars().subscribe((data) => {
+      this.cars = data;
+      console.log(this.cars);
+      
+    })
   }
 
+
   showCarDetails(id) {
-    this.router.navigate(['/auth/car-details', id])
+    this.router.navigate(['/auth/car-details', id]);
   }
+
+
+
 
 }

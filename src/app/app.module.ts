@@ -9,7 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContentComponent } from './components/content/content.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
-import { MaintenenceComponent } from './components/maintenence/maintenence.component';
+import { MaintenanceComponent } from './components/maintenance/maintenance.component';
 import { TopComponent } from './components/top/top.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
@@ -17,8 +17,9 @@ import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CarAddComponent } from './components/car-add/car-add.component';
-import { CarEditComponent } from './components/car-edit/car-edit.component';
 import { CarDetailsComponent } from './components/car-details/car-details.component';
+import { CarEditComponent } from './components/car-edit/car-edit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,20 +30,21 @@ import { CarDetailsComponent } from './components/car-details/car-details.compon
     ContentComponent,
     MenuComponent,
     HomeComponent,
-    MaintenenceComponent,
+    MaintenanceComponent,
     TopComponent,
     RegisterPageComponent,
     LoginPageComponent,
     AuthPageComponent,
     NotFoundPageComponent,
     CarAddComponent,
-    CarEditComponent,
-    CarDetailsComponent
+    CarDetailsComponent,
+    CarEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,8 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Car } from 'src/app/models/Car';
+
 import { CarsService } from 'src/app/services/cars.service';
 
 @Component({
@@ -9,13 +12,26 @@ import { CarsService } from 'src/app/services/cars.service';
 })
 export class CarDetailsComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private carsService: CarsService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private carsService: CarsService,
+    private location: Location
+    ) { }
+
+  car: Car;
 
   ngOnInit(): void {
-    this.route.snapshot.params["id"];
+    let id = this.route.snapshot.params["id"];
     this.carsService.getCar(id).subscribe((car) => {
-
+      // console.log(car);
+      this.car = car;
     });
   }
+
+  onBack() {
+    this.location.back();
+  }
+
+
 
 }

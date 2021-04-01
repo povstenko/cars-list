@@ -1,1 +1,30 @@
-<p>car-add works!</p>
+<div class="px-4 py-5 mb-5 bg-dark text-secondary">
+    <h1 class="display-5 fw-bold text-white">Add New Car</h1>
+    <a (click)="onBack()" class="btn btn-secondary">Go Back</a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <form #myForm="ngForm" novalidate (ngSubmit)="onSubmit(myForm)">
+                        <label for="exampleInputName" class="form-label text-start">Сar Name</label>
+                        <input type="text" class="form-control mb-3" id="exampleInputName" name="name" ngModel required>
+
+                        <label for="exampleInputModel" class="form-label text-left">Car Model</label>
+                        <input type="text" class="form-control mb-3" id="exampleInputModel" name="model" ngModel
+                            required>
+
+                        <label for="exampleInputPrice" class="form-label text-left">Price</label>
+                        <input type="number" class="form-control mb-3" id="exampleInputPrice" name="price" ngModel
+                            required>
+
+                        <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Add New Car</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

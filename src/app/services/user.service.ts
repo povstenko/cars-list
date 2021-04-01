@@ -12,6 +12,7 @@ export class UserService {
   url = 'http://localhost:3000/users';
   users: User[] = [];
   isAuthenticated = true;
+  currentUser: User = null;
 
   constructor(private router: Router, private http: HttpClient) {
     this.http.get(this.url).subscribe((data: User[]) => {
@@ -24,6 +25,7 @@ export class UserService {
     this.users.forEach((user) => {
       if (user['email'] == email) {
         pass = user['password'];
+        this.currentUser = user;
       }
     });
 
@@ -32,9 +34,11 @@ export class UserService {
         this.isAuthenticated = true;
         return of({}).pipe(delay(0));
       } else {
+        this.currentUser = null;
         return throwError('Invalid password');
       }
     } else {
+      this.currentUser = null;
       return throwError('Invalid email');
     }
   }
@@ -61,5 +65,9 @@ export class UserService {
     this.isAuthenticated = false;
     this.router.navigate(['/login']);
     return of({});
+  }
+
+  getCurrentUser() {
+    return this.currentUser;
   }
 }

@@ -1,54 +1,66 @@
 {
-    "users": [
-        {
-            "id": 0,
-            "login": "povstenko",
-            "email": "vitaly.povstenko@gmail.com",
-            "password": "123"
-        },
-        {
-            "id": 1,
-            "login": "admin",
-            "email": "admin@gmail.com",
-            "password": "123"
-        },
-        {
-            "id": 2,
-            "login": "user",
-            "email": "user@gmail.com",
-            "password": "123"
-        }
-    ],
-    "cars": [
-        {
-            "id": 0,
-            "name": "BMW",
-            "model": "X5",
-            "price": 300
-        },
-        {
-            "id": 1,
-            "name": "Ford",
-            "model": "Focus",
-            "price": 175
-        },
-        {
-            "id": 2,
-            "name": "Mitsubishi",
-            "model": "Lancer",
-            "price": 100
-        },
-        {
-            "id": 3,
-            "name": "Toyota",
-            "model": "Supra",
-            "price": 150
-        },
-        {
-            "id": 4,
-            "name": "Ford",
-            "model": "Focus",
-            "price": 200
-        }
-    ]
+  "users": [
+    {
+      "id": 0,
+      "login": "povstenko",
+      "email": "vitaly.povstenko@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 1,
+      "login": "admin",
+      "email": "admin@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "login": "user",
+      "email": "user@gmail.com",
+      "password": "123"
+    }
+  ],
+  "cars": [
+    {
+      "id": 0,
+      "name": "BMW",
+      "model": "X5",
+      "price": 300
+    },
+    {
+      "id": 1,
+      "name": "Ford",
+      "model": "Focus",
+      "price": 175
+    },
+    {
+      "id": 2,
+      "name": "Mitsubishi",
+      "model": "Lancer",
+      "price": 100
+    },
+    {
+      "id": 3,
+      "name": "Toyota",
+      "model": "Supra",
+      "price": 150
+    },
+    {
+      "id": 4,
+      "name": "Ford",
+      "model": "Focus",
+      "price": 200
+    },
+    {
+      "id": 5,
+      "name": "test",
+      "model": "test",
+      "price": 1
+    },
+    {
+      "id": 6,
+      "name": "tes",
+      "model": "test",
+      "price": 1
+    }
+  ]
 }

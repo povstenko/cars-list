@@ -7,16 +7,16 @@ import { CarsService } from 'src/app/services/cars.service';
 @Component({
   selector: 'app-car-add',
   templateUrl: './car-add.component.html',
-  styleUrls: ['./car-add.component.css']
+  styleUrls: ['./car-add.component.css'],
 })
 export class CarAddComponent implements OnInit {
-
-  constructor(private route: ActivatedRoute,
+  constructor(
     private carsService: CarsService,
-    private location: Location, private router: Router) { }
+    private location: Location,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   onBack() {
     this.location.back();
   }
@@ -37,5 +37,4 @@ export class CarAddComponent implements OnInit {
       );
     }
   }
-
 }

@@ -26,7 +26,9 @@ export class MaintenanceComponent implements OnInit {
   showCarDetails(id) {
     this.router.navigate(['/auth/car-details', id]);
   }
-
+  showCarEdit(id) {
+    this.router.navigate(['/auth/car-edit', id]);
+  }
 
 
 

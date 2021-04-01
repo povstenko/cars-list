@@ -15,7 +15,6 @@ export class CarsService {
   }
 
   getCar(id): Observable<Car> {
-    // this.http.get(this.url + '/' + id)
     return this.http.get(`${this.url}/${id}`) as Observable<Car>;
   }
 
@@ -23,11 +22,11 @@ export class CarsService {
     // ...
   }
 
-  updateCar() {
+  updateCar(id: number) {
     // ...
   }
 
-  addCar(name: string, model: string, price: number): Observable<any>  {
+  addCar(name: string, model: string, price: number): Observable<any> {
     return this.http.post(
       this.url,
       {

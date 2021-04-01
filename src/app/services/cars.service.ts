@@ -22,8 +22,21 @@ export class CarsService {
     // ...
   }
 
-  updateCar(id: number) {
-    // ...
+  updateCar(id: number, name:string, model:string, price: number) {
+    return this.http.put(
+      this.url + "/"+ id,
+      {
+        id: '',
+        name: name,
+        model: model,
+        price: price,
+      },
+      {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+        }),
+      }
+    );
   }
 
   addCar(name: string, model: string, price: number): Observable<any> {

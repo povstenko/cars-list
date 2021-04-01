@@ -30,12 +30,13 @@ export class CarEditComponent implements OnInit {
   }
   onSubmit(myForm: NgForm) {
     console.log(myForm);
+    let id = this.car.id;
     let name = myForm.value.name;
     let model = myForm.value.model;
     let price = myForm.value.price;
 
     if (myForm.valid) {
-      this.carsService.addCar(name, model, price).subscribe(
+      this.carsService.updateCar(id, name, model, price).subscribe(
         () => {
           this.router.navigate(['/auth/maintenance']);
         },

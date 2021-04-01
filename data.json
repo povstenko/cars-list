@@ -61,6 +61,12 @@
       "name": "tes",
       "model": "test",
       "price": 1
+    },
+    {
+      "id": 7,
+      "name": "ф",
+      "model": "test",
+      "price": 1
     }
   ]
 }

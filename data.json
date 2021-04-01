@@ -51,22 +51,64 @@
       "price": 200
     },
     {
-      "id": 5,
-      "name": "test",
-      "model": "test",
-      "price": 1
+      "id": 0,
+      "name": "BMW",
+      "model": "X5",
+      "price": 300
     },
     {
-      "id": 6,
-      "name": "tes",
-      "model": "test",
-      "price": 1
+      "id": 1,
+      "name": "Ford",
+      "model": "Focus",
+      "price": 175
     },
     {
-      "id": 7,
-      "name": "ф",
-      "model": "test",
-      "price": 1
+      "id": 2,
+      "name": "Mitsubishi",
+      "model": "Lancer",
+      "price": 100
+    },
+    {
+      "id": 3,
+      "name": "Toyota",
+      "model": "Supra",
+      "price": 150
+    },
+    {
+      "id": 4,
+      "name": "Ford",
+      "model": "Focus",
+      "price": 200
+    },
+    {
+      "id": 0,
+      "name": "BMW",
+      "model": "X5",
+      "price": 300
+    },
+    {
+      "id": 1,
+      "name": "Ford",
+      "model": "Focus",
+      "price": 175
+    },
+    {
+      "id": 2,
+      "name": "Mitsubishi",
+      "model": "Lancer",
+      "price": 100
+    },
+    {
+      "id": 3,
+      "name": "Toyota",
+      "model": "Supra",
+      "price": 150
+    },
+    {
+      "id": 4,
+      "name": "Ford",
+      "model": "Focus",
+      "price": 200
     }
   ]
 }

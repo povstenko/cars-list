@@ -1,14 +1,28 @@
 <div class="px-4 py-5 mb-5 bg-dark text-secondary">
-	<h1 class="display-5 fw-bold text-white">Car Details</h1>
-    <a (click)="onBack()" class="btn btn-primary">Back</a>
+    <h1 class="display-5 fw-bold text-white">Car Details</h1>
+    <a (click)="onBack()" class="btn btn-secondary">Go Back</a>
 </div>
 
-<div class="container mt-5">
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">{{car.name}}</h5>
-            <p class="card-text">{{car.model}}</p>
-            <p class="card-text">{{car.price}}</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <label for="exampleInputName" class="form-label text-start">Name</label>
+                        <input type="text" class="form-control mb-3" id="exampleInputName" name="name" ngModel
+                            [(ngModel)]="car.name" readonly>
+
+                        <label for="exampleInputModel" class="form-label text-left">Model</label>
+                        <input type="text" class="form-control mb-3" id="exampleInputModel" name="model" ngModel
+                            [(ngModel)]="car.model" readonly>
+
+                        <label for="exampleInputPrice" class="form-label text-left">Price</label>
+                        <input type="number" class="form-control mb-3" id="exampleInputPrice" name="price" ngModel
+                            [(ngModel)]="car.price" readonly>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

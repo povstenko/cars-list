@@ -10,15 +10,16 @@
                 <div class="card-body">
                     <form #myForm="ngForm" novalidate (ngSubmit)="onSubmit(myForm)">
                         <label for="exampleInputName" class="form-label text-start">Name</label>
-                        <input type="text" class="form-control mb-3" id="exampleInputName" name="name" ngModel [(ngModel)]="car.name" required >
+                        <input type="text" class="form-control mb-3" id="exampleInputName" name="name" ngModel
+                            [(ngModel)]="car.name" required>
 
                         <label for="exampleInputModel" class="form-label text-left">Model</label>
-                        <input type="text" class="form-control mb-3" id="exampleInputModel" name="model" ngModel [(ngModel)]="car.model"
-                            required>
+                        <input type="text" class="form-control mb-3" id="exampleInputModel" name="model" ngModel
+                            [(ngModel)]="car.model" required>
 
                         <label for="exampleInputPrice" class="form-label text-left">Price</label>
-                        <input type="number" class="form-control mb-3" id="exampleInputPrice" name="price" ngModel [(ngModel)]="car.price"
-                            required>
+                        <input type="number" class="form-control mb-3" id="exampleInputPrice" name="price" ngModel
+                            [(ngModel)]="car.price" required>
 
                         <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Save</button>
                     </form>

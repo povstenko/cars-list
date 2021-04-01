@@ -18,13 +18,17 @@ export class CarsService {
     return this.http.get(`${this.url}/${id}`) as Observable<Car>;
   }
 
-  deleteCar(id: number) {
-    // ...
+  deleteCar(id: number): Observable<any> {
+    return this.http.delete(`${this.url}/${id}`, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+    });
   }
 
-  updateCar(id: number, name:string, model:string, price: number) {
+  updateCar(id: number, name: string, model: string, price: number) {
     return this.http.put(
-      this.url + "/"+ id,
+      `${this.url}/${id}`,
       {
         id: '',
         name: name,

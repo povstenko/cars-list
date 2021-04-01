@@ -1,4 +1,4 @@
-<div class="px-4 py-5 mb-5 bg-dark text-secondary">
+<div class="px-4 py-5 bg-dark text-secondary">
 	<h1 class="display-5 fw-bold text-white">Car Maintenance</h1>
 	<button type="button" class="btn btn-primary" routerLink="/auth/car-add">Add new car</button>
 </div>
@@ -25,7 +25,8 @@
 								(click)="showCarDetails(car.id)">Details</button>
 							<button type="button" class="btn btn-warning mx-1"
 								(click)="showCarEdit(car.id)">Edit</button>
-							<button type="button" class="btn btn-danger mx-1">Delete</button>
+							<button type="button" class="btn btn-danger mx-1"
+								(click)="showCarDelete(car.id)">Delete</button>
 						</td>
 					</tr>
 				</tbody>

@@ -1,27 +1,50 @@
-<div class="px-4 py-5 mb-5 bg-dark text-secondary">
-    <h1 class="display-5 fw-bold text-white">Edit Car</h1>
-    <a (click)="onBack()" class="btn btn-secondary">Go Back</a>
+<div class="px-4 py-5 mb-5 text-center border-bottom bg-light shadow-sm">
+    <h1 class="display-5 mt-5 mb-3">Edit Car Details</h1>
+    <a (click)="onBack()" class="btn btn-outline-dark">
+        <i class="fa fa-chevron-left"></i> Go Back</a>
 </div>
 
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="card">
+            <div class="card card mb-5 w-50 mx-auto shadow">
                 <div class="card-body">
                     <form #myForm="ngForm" novalidate (ngSubmit)="onSubmit(myForm)">
-                        <label for="exampleInputName" class="form-label text-start">Name</label>
-                        <input type="text" class="form-control mb-3" id="exampleInputName" name="name" ngModel
-                            [(ngModel)]="car.name" required>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="exampleInputName" class="form-label text-start">Name</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" class="form-control mb-3" id="exampleInputName" name="name" ngModel
+                                    [(ngModel)]="car.name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="exampleInputModel" class="form-label text-left">Model</label>
 
-                        <label for="exampleInputModel" class="form-label text-left">Model</label>
-                        <input type="text" class="form-control mb-3" id="exampleInputModel" name="model" ngModel
-                            [(ngModel)]="car.model" required>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" class="form-control mb-3" id="exampleInputModel" name="model" ngModel
+                                    [(ngModel)]="car.model" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="exampleInputPrice" class="form-label text-left">Price</label>
+                            </div>
+                            <div class="col-9">
+                                <input type="number" class="form-control mb-3" id="exampleInputPrice" name="price"
+                                    ngModel [(ngModel)]="car.price" required>
+                            </div>
+                        </div>
 
-                        <label for="exampleInputPrice" class="form-label text-left">Price</label>
-                        <input type="number" class="form-control mb-3" id="exampleInputPrice" name="price" ngModel
-                            [(ngModel)]="car.price" required>
-
-                        <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Save</button>
+                        <div class="row">
+                            <div class="col text-center">
+                                <button type="submit" class="btn btn-primary mt-3" [disabled]="myForm.invalid"><i
+                                    class="fa fa-save"></i> Save Changes</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

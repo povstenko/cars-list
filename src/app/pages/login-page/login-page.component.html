@@ -1,13 +1,20 @@
-<main class="form-signin text-center card">
-    <h4>Login</h4>
+<main class="form-signin text-center">
     <form #myForm="ngForm" novalidate (ngSubmit)="onSubmit(myForm)">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" name="email" ngModel required email>
-    
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control mb-3" id="exampleInputPassword1" name="password" ngModel required>
-        
-        <button type="submit" class="btn btn-secondary float-start" routerLink="/register">Registration</button>
-        <button type="submit" class="btn btn-primary float-end" [disabled]="myForm.invalid">Sign In</button>
+        <h1 class="h3 mb-3 fw-normal">Please log in</h1>
+
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email"
+                ngModel required email>
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"
+                ngModel required>
+            <label for="floatingPassword">Password</label>
+        </div>
+
+        <button type="submit" class="w-100 btn btn-lg btn-primary" [disabled]="myForm.invalid">Log In</button>
+        <p><a routerLink="/register">Create new account</a></p>
+        <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
 </main>

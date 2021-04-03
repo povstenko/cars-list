@@ -20,6 +20,7 @@ import { CarAddComponent } from './components/car-add/car-add.component';
 import { CarDetailsComponent } from './components/car-details/car-details.component';
 import { CarEditComponent } from './components/car-edit/car-edit.component';
 import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     NotFoundPageComponent,
     CarAddComponent,
     CarDetailsComponent,
-    CarEditComponent
+    CarEditComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

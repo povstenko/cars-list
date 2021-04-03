@@ -1,13 +1,23 @@
 <div class="px-4 py-5 mb-5 text-secondary text-center border-bottom bg-light shadow-sm">
     <h4 class="mt-5">Hello, {{username}}</h4>
     <h1 class="display-4 text-dark">Welcome to the Car Service</h1>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <input type="text" id="search_cars" class="form-control" placeholder="Search" [(ngModel)]="search_str">
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
 </div>
 
 <div class="container">
     <div class="row">
         <div class="col">
             <div class="card mb-5 shadow">
-                <div class="card-body" *ngFor="let car of cars">
+                <div class="card-body" *ngFor="let car of cars | search:search_str">
                     <div class="card">
                         <div class="card-body">
                             <div class="row fs-6 text-sm">

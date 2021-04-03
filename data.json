@@ -23,6 +23,12 @@
       "login": "user",
       "email": "user@gmail.com",
       "password": "123"
+    },
+    {
+      "id": 4,
+      "login": "a",
+      "email": "a@gmail",
+      "password": "123"
     }
   ],
   "cars": [
@@ -30,13 +36,7 @@
       "id": 0,
       "name": "BMW",
       "model": "X5",
-      "price": 300
-    },
-    {
-      "id": 1,
-      "name": "Ford",
-      "model": "Focus",
-      "price": 175
+      "price": 3001
     },
     {
       "id": 2,
@@ -163,6 +163,18 @@
       "name": "1",
       "model": "1",
       "price": 1
+    },
+    {
+      "id": 14,
+      "name": "test",
+      "model": "test",
+      "price": 111
+    },
+    {
+      "id": 15,
+      "name": "q",
+      "model": "1",
+      "price": 11
     }
   ]
 }

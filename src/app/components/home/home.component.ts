@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private carsService: CarsService, private router: Router, private userService: UserService) { }
   cars: Car[] = [];
   username = "name";
+  search_str = "";
 
   ngOnInit(): void {
     this.carsService.getCars().subscribe((data) => {
